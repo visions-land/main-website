@@ -1,0 +1,56 @@
+<article class="card">
+  <div class="card-header">
+    {{ hero }}
+    <h1 class="card-title">{{ page.heading }}</h1>
+  </div>
+
+  <div class="card-content">
+    <div class="prose">
+      {{ about.body }}
+    </div>
+
+    <a href="chapters.html" class="btn btn--primary btn--block">
+      {{ btn.chapters }}
+    </a>
+
+    <a href="collection.html" class="btn btn--outline btn--block">
+      {{ btn.collection }}
+    </a>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-content">
+    <h2 class="section-title">{{ contact.heading }}</h2>
+
+    <dl class="contact-list">
+      <div>
+        <dt class="contact__address">
+          <a href="mailto:{{ site.email_info }}">{{ site.email_info }}</a>
+        </dt>
+        <dd class="contact__role">{{ contact.info_role }}</dd>
+      </div>
+
+      <div>
+        <dt class="contact__address">
+          <a href="mailto:{{ site.email_partnerships }}"
+            >{{ site.email_partnerships }}</a
+          >
+        </dt>
+        <dd class="contact__role">{{ contact.partnerships_role }}</dd>
+      </div>
+
+      <div>
+        <dt class="contact__address">
+          <a
+            href="{{ site.instagram }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ site.instagram_handle }}</a
+          >
+        </dt>
+        <dd class="contact__role">{{ contact.instagram_role }}</dd>
+      </div>
+    </dl>
+  </div>
+</article>

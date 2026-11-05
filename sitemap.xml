@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://visions.land/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/" />
+  </url>
+  <url>
+    <loc>https://visions.land/it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/" />
+  </url>
+  <url>
+    <loc>https://visions.land/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/" />
+  </url>
+  <url>
+    <loc>https://visions.land/chapters.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/chapters.html" />
+  </url>
+  <url>
+    <loc>https://visions.land/it/chapters.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/chapters.html" />
+  </url>
+  <url>
+    <loc>https://visions.land/zh/chapters.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/chapters.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/chapters.html" />
+  </url>
+  <url>
+    <loc>https://visions.land/collection.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/collection.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/collection.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/collection.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/collection.html" />
+  </url>
+  <url>
+    <loc>https://visions.land/it/collection.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/collection.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/collection.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/collection.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/collection.html" />
+  </url>
+  <url>
+    <loc>https://visions.land/zh/collection.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://visions.land/collection.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://visions.land/it/collection.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://visions.land/zh/collection.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://visions.land/collection.html" />
+  </url>
+</urlset>

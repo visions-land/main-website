@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*~
+.idea/
+.vscode/
+
+# Local agent config — not for a public repo
+.claude/
+
+# Python
+__pycache__/
+*.pyc

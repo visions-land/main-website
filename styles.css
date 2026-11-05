@@ -1,0 +1,737 @@
+/* ============================================================
+   VISIONS — visions.land
+   DESIGN SYSTEM — SINGLE SOURCE OF TRUTH
+   All colors, fonts, radii, etc. are defined here and only here.
+   The structure is carried over from the chapter sites
+   (2025.visions.land, 2026.visions.land); the palette is not.
+   Those sites each own a hue — amber for 2025, blue for 2026.
+   The hub owns none, so it still reads as the institution when a
+   fourth chapter arrives in a colour nobody has picked yet.
+   To restyle the site, edit the :root block.
+   ============================================================ */
+
+:root {
+  /* Fonts */
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  /* Simplified-Chinese stack. The Latin stack would fall back per glyph
+     anyway, but naming SC faces explicitly — together with lang="zh-Hans"
+     on the page — stops a Japanese face resolving for shared ideographs. */
+  --font-cjk: ui-sans-serif, system-ui, "PingFang SC", "Hiragino Sans GB",
+    "Source Han Sans SC", "Noto Sans SC", "Noto Sans CJK SC",
+    "Microsoft YaHei", "Heiti SC", sans-serif;
+
+  --background: #09090b;
+  --foreground: #ffffff;
+
+  --card: #09090b;
+  --card-foreground: #ffffff;
+  --card-border: #3f3f46;
+
+  --primary: #fafafa;
+  --primary-foreground: #09090b;
+
+  --secondary: #d4d4d8;
+  --secondary-foreground: #09090b;
+
+  --muted: #52525b;
+  --muted-foreground: #a1a1aa;
+
+  --accent: #e4e4e7;
+  --accent-foreground: #18181b;
+
+  --border: #27272a;
+  --ring: #a1a1aa;
+
+  --radius: 0.5rem;
+}
+
+/* ----------------------------------------------------------
+   RESET
+   ---------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: 0 solid var(--border);
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--foreground);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* ----------------------------------------------------------
+   LAYOUT
+   ---------------------------------------------------------- */
+
+.page {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* ----------------------------------------------------------
+   MASTHEAD
+   ---------------------------------------------------------- */
+
+.masthead {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* A block-level anchor gives the logo a stable containing block, so the
+   percentage widths below resolve against the container rather than against
+   a shrink-to-fit box. */
+.masthead a {
+  display: block;
+  text-decoration: none;
+}
+
+.masthead img {
+  width: 100%;
+  max-width: 42rem;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.masthead--visions img {
+  --logo-scale: 2.54545;
+  width: calc(100% / var(--logo-scale));
+  max-width: calc(42rem / var(--logo-scale));
+}
+
+/* ----------------------------------------------------------
+   CARD
+   ---------------------------------------------------------- */
+
+.card-wrap {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.card {
+  padding: 1.5rem;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  background-color: var(--card);
+  color: var(--card-foreground);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.card-hero {
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 28rem;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+/* The hero is cropped at every viewport: the box is wider than the image's
+   2:1 ratio on desktop (cropping top/bottom) and narrower than it on a phone
+   in portrait (cropping left/right). Anchoring to the right edge keeps the
+   right-hand side of the picture in frame when the crop is horizontal, while
+   leaving the vertical crop centred as before. */
+.card-hero img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.card-content {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ----------------------------------------------------------
+   PROSE
+   ---------------------------------------------------------- */
+
+.prose {
+  color: var(--muted-foreground);
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prose--tight {
+  gap: 0.75rem;
+}
+
+.prose p,
+.prose li {
+  text-align: justify;
+}
+
+/* Inline code. The background is the same gray as --border, so code chips sit
+   on the one neutral the design system already defines. Sized in `em` so the
+   chip tracks whatever text it is embedded in, including the smaller FAQ
+   panels. */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--primary);
+  background-color: var(--border);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0.15em 0.4em;
+  /* Paths and commands are single long tokens; let them break rather than
+     overflow the card on narrow viewports. */
+  overflow-wrap: break-word;
+  /* ...but break them on their own boundaries, never with a hyphen inserted
+     into a command. */
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  text-align: justify;
+}
+
+.disc {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.plain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lead-in {
+  margin-bottom: 0.5rem;
+}
+
+/* ----------------------------------------------------------
+   BUTTONS
+   ---------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  height: 2.75rem;
+  padding-inline: 2rem;
+}
+
+.btn--block {
+  width: 100%;
+  display: flex;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* The chapter sites brighten the primary button on hover. This palette's
+   primary is already near-white, so brightness(1.1) is invisible; step down
+   to the secondary instead, which registers. */
+.btn--primary:hover {
+  background-color: var(--secondary);
+  color: var(--primary-foreground);
+}
+
+.btn--outline {
+  border: 1px solid var(--card-border);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.btn--outline:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  filter: brightness(1.1);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+   ---------------------------------------------------------- */
+
+.footer {
+  max-width: 42rem;
+  margin: 2rem auto 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.footer a {
+  color: inherit;
+}
+
+/* ----------------------------------------------------------
+   HUB COMPONENTS
+   The chapter sites are one card on one page. The hub indexes
+   things, so it needs structures they do not have: more than
+   one card per page, a language bar, and two kinds of list.
+   ---------------------------------------------------------- */
+
+.card + .card {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- language bar ----------
+
+   Each language is a real generated page, so switching is three ordinary
+   links and needs no JavaScript. The current language is a <span>, not a
+   link to itself. */
+
+.langbar {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+}
+
+.langbar a,
+.langbar span {
+  text-decoration: none;
+  color: var(--muted-foreground);
+  opacity: 0.6;
+  transition: opacity 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.langbar a:hover {
+  opacity: 1;
+  color: var(--foreground);
+}
+
+.langbar [aria-current="page"] {
+  opacity: 1;
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- chapter archive ---------- */
+
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Each entry borrows the primary colour of its own chapter's site, handed in
+   by the build as --chapter-accent, so the archive reads as a row of coloured
+   spines on an otherwise hue-free page. A chapter without one falls back to
+   the neutral border the rest of the hub uses. */
+.chapter {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  border: 1px solid var(--chapter-accent, var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+/* The border is already the accent at rest, so hover cannot signal by changing
+   it. A faint wash does the work instead, and still reads on the entries that
+   have no accent. */
+.chapter:hover {
+  border-color: var(--chapter-accent, var(--card-border));
+  background-color: rgb(255 255 255 / 0.04);
+  color: var(--foreground);
+}
+
+.chapter__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+}
+
+.chapter__title {
+  font-weight: 600;
+}
+
+.chapter__meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* A single line of description, so unlike .prose it must not be justified. */
+.chapter__note {
+  display: block;
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  text-align: left;
+}
+
+/* A chapter whose site is not online yet. The build renders it as a <div>
+   rather than an <a>, so there is nothing to click and nothing to focus;
+   this mirrors how .btn[aria-disabled] reads. */
+.chapter--soon {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15em 0.45em;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 4px);
+  color: var(--muted-foreground);
+}
+
+/* ---------- the collection ---------- */
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* The reset zeroes <ul> only; this list is an <ol>, because the order
+     (newest acquisition first) is part of what it says. */
+  padding: 0;
+  list-style: none;
+}
+
+.work {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.work-list > li:first-child .work {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.work__title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.work__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.work__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+}
+
+.work__meta dt {
+  flex: 0 0 9rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted-foreground);
+  padding-top: 0.2em;
+}
+
+.work__meta dd {
+  flex: 1 1 12rem;
+}
+
+.work__note {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  text-align: left;
+}
+
+/* ---------- contacts ---------- */
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__address {
+  font-weight: 600;
+}
+
+.contact__role {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* ----------------------------------------------------------
+   NARROW VIEWPORTS (phone, portrait)
+   ---------------------------------------------------------- */
+
+/* Justified text only looks right when the measure is wide enough for the
+   browser to absorb the slack of each line into the word-gaps unnoticed. In
+   portrait the three nested gutters (container + card + card-content) spend
+   ~160px of a ~390px viewport, leaving a ~230px measure — around 30 characters
+   per line, where a single long word tears a visible river open.
+
+   Three things widen the measure in characters: narrower gutters, type that
+   scales down with the viewport, and hyphenation, which gives the justifier
+   break points *inside* long words. The last is what actually closes the gaps;
+   it relies on <html lang="en">, which the pages set. */
+@media (max-width: 640px) {
+  .container {
+    padding-inline: 0.75rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .card-header {
+    padding: 0.75rem 0.75rem 1.5rem;
+  }
+
+  .card-content {
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  /* ~13px at 390px wide, growing to the full 16px by the time the viewport is
+     roughly 470px, where the measure no longer needs the help. */
+  .prose,
+  .note {
+    font-size: clamp(0.8125rem, 3.4vw, 1rem);
+  }
+
+  .prose p,
+  .prose li,
+  .note {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+  }
+
+  /* A last resort for anything the hyphenator cannot break, such as a URL:
+     overflow rather than a line with two words on it. */
+  .prose p,
+  .prose li {
+    overflow-wrap: break-word;
+  }
+
+  .card-title {
+    font-size: 1.625rem;
+  }
+}
+
+/* ----------------------------------------------------------
+   CHINESE TYPOGRAPHY
+
+   The rules above are tuned for Latin text. Han glyphs are full-width and
+   need different treatment, and the narrow-viewport block in particular is
+   actively wrong for them: it turns on automatic hyphenation, which CJK
+   never uses, and drops the type to 13px, below which Han is illegible.
+
+   These selectors carry an attribute and a class, so they outrank the
+   rules they correct regardless of source order.
+   ---------------------------------------------------------- */
+
+html[lang="zh-Hans"] {
+  font-family: var(--font-cjk);
+}
+
+html[lang="zh-Hans"] .prose p,
+html[lang="zh-Hans"] .prose li,
+html[lang="zh-Hans"] .note,
+html[lang="zh-Hans"] .chapter__note,
+html[lang="zh-Hans"] .work__note {
+  /* CJK justifies natively and well, so text-align: justify stays. */
+  line-height: 1.85;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  line-break: strict;
+}
+
+html[lang="zh-Hans"] .card-title,
+html[lang="zh-Hans"] .section-title,
+html[lang="zh-Hans"] .work__title {
+  /* The Latin -0.025em tracking crowds Han glyphs. */
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  html[lang="zh-Hans"] .prose p,
+  html[lang="zh-Hans"] .prose li,
+  html[lang="zh-Hans"] .note {
+    hyphens: none;
+    -webkit-hyphens: none;
+    font-size: clamp(0.875rem, 3.6vw, 1rem);
+  }
+}
+
+/* ----------------------------------------------------------
+   NARROW VIEWPORTS — HUB COMPONENTS
+   ---------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  /* Two columns of field/value do not fit a phone; stack them. */
+  .work__meta dt {
+    flex: 1 0 100%;
+  }
+
+  .work__meta dd {
+    flex: 1 0 100%;
+  }
+}
+
+/* ----------------------------------------------------------
+   ACCESSIBILITY
+   ---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}

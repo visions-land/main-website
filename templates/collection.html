@@ -1,0 +1,24 @@
+<article class="card">
+  <div class="card-header">
+    <h1 class="card-title">{{ page.heading }}</h1>
+  </div>
+
+  <div class="card-content">
+    <div class="prose">
+      {{ page.intro }}
+    </div>
+
+    <ol class="work-list">
+      {{ block.works }}
+    </ol>
+
+    <p class="note">{{ page.reviewed }}: {{ site.provenance_reviewed }}</p>
+
+    <a
+      href="mailto:{{ site.email_partnerships }}"
+      class="btn btn--primary btn--block"
+    >
+      {{ btn.partnerships }}
+    </a>
+  </div>
+</article>

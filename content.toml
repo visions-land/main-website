@@ -1,0 +1,365 @@
+# =============================================================================
+#  VISIONS — ALL SITE COPY, ALL LANGUAGES, ONE FILE.
+#
+#  This file is the single source of truth for every word on visions.land.
+#  Edit here, then run:
+#
+#      python3 build.py
+#
+#  ...which regenerates index.html, chapters.html, collection.html and the
+#  it/ and zh/ versions of all three. Never edit those files directly.
+#
+#  LANGUAGES. Every string has an `en`, an `it` and a `zh`. English is the
+#  source and the fallback: leave `it` or `zh` empty and the build quietly
+#  uses the English, then tells you exactly which strings are outstanding.
+#  Nothing ever silently disappears from the site.
+#
+#  PROSE values are raw HTML fragments, so <p>, <em>, <strong> and <a> all
+#  work as you would expect. Keep each paragraph in its own <p>.
+#  SHORT values are plain text and must not contain HTML.
+# =============================================================================
+
+[site]
+domain = "https://visions.land"
+languages = ["en", "it", "zh"]
+
+# BCP-47 tags written into <html lang="...">, and the labels on the switcher.
+langtags = { en = "en", it = "it", zh = "zh-Hans" }
+langlabels = { en = "EN", it = "IT", zh = "中文" }
+
+email_info = "info@visions.land"
+email_partnerships = "partnerships@visions.land"
+instagram = "https://instagram.com/visions.land"
+instagram_handle = "@visions.land"
+
+# Shown on the collection page. Bump this whenever you check that every
+# "currently held at" below is still true.
+provenance_reviewed = "2026-11"
+
+# Optional hero image for the front page. Put a 1280x635 JPEG in assets/ and
+# name it here to switch the hero on; leave empty for no hero.
+hero = ""
+hero_alt = { en = "", it = "", zh = "" }
+
+
+# =============================================================================
+#  FRONT PAGE
+# =============================================================================
+
+[page.index.title]
+en = "Visions — art at the end of the world as we know it"
+it = "Visions — arte alla fine del mondo come lo conosciamo"
+zh = "Visions — 在我们所知的世界终结之处做艺术"
+
+[page.index.description]
+en = "Visions is an unstructured group of professionals working across culture and technology. We organise art events, prizes, exhibitions and residencies."
+it = "Visions è un gruppo non strutturato di professionisti che lavorano tra cultura e tecnologia. Organizziamo eventi d'arte, premi, mostre e residenze."
+zh = "Visions 是一个由文化与技术领域专业人士组成的非结构化团体。我们组织艺术活动、奖项、展览与驻留项目。"
+
+# The wordmark sits directly above this, so the heading says something rather
+# than repeating the name.
+[page.index.heading]
+en = "Art at the end of the world as we know it"
+it = "Arte alla fine del mondo come lo conosciamo"
+zh = "在我们所知的世界终结之处做艺术"
+
+[about.body]
+en = '''
+<p>Visions is an unstructured group of professionals working across culture
+and technology. We organise art events, prizes, exhibitions and residencies.</p>
+
+<p>We work on what is actually happening. The civilisation that was promised
+to us is running out of road. Machine intelligence is being built faster than
+anyone can steer it. Feudal power is being rebuilt in software, and the
+nation — that two-hundred-year-old administrative fiction — is quietly coming
+apart. These are not metaphors and they are not predictions. They are the
+conditions under which art now gets made.</p>
+
+<p>We are not a foundation and we are not a gallery. We have no permanent
+address and no permanent programme. Each year we open a <em>chapter</em>: a
+theme, a call, a prize, an exhibition. We acquire the work it produces, and we
+keep it.</p>
+'''
+it = '''
+<p>Visions è un gruppo non strutturato di professionisti che lavorano tra
+cultura e tecnologia. Organizziamo eventi d'arte, premi, mostre e residenze.</p>
+
+<p>Lavoriamo su ciò che sta davvero accadendo. La civiltà che ci era stata
+promessa ha esaurito la strada. L'intelligenza artificiale viene costruita più
+in fretta di quanto chiunque sia in grado di governarla. Il potere feudale
+viene ricostruito nel software e la nazione — quella finzione amministrativa
+vecchia di duecento anni — si sta disfacendo in silenzio. Non sono metafore e
+non sono previsioni: sono le condizioni in cui oggi si fa arte.</p>
+
+<p>Non siamo una fondazione e non siamo una galleria. Non abbiamo una sede
+fissa né un programma permanente. Ogni anno apriamo un <em>capitolo</em>: un
+tema, un bando, un premio, una mostra. Acquisiamo l'opera che ne nasce, e la
+conserviamo.</p>
+'''
+zh = '''
+<p>Visions 是一个由文化与技术领域专业人士组成的非结构化团体。我们组织艺术活动、
+奖项、展览与驻留项目。</p>
+
+<p>我们关注的是正在真实发生的事。曾经许诺给我们的那种文明已走到尽头。机器智能的
+建造速度，已超出任何人能够驾驭的范围。封建式的权力正在软件中被重建，而民族国家
+——这个两百年前的行政虚构——正在悄然解体。这些既不是隐喻，也不是预言，而是今天
+艺术得以产生的现实条件。</p>
+
+<p>我们不是基金会，也不是画廊。我们没有固定的地址，也没有长期的节目表。每一年，
+我们开启一个<em>章节</em>：一个主题、一次征集、一个奖项、一场展览。我们收藏由此
+诞生的作品，并长期保存。</p>
+'''
+
+
+
+# =============================================================================
+#  CHAPTERS PAGE
+# =============================================================================
+
+[page.chapters.title]
+en = "Chapters — Visions"
+it = "Capitoli — Visions"
+zh = "章节 — Visions"
+
+[page.chapters.description]
+en = "Every year Visions opens a chapter: a theme, a call, and the body of work that answers it. The archive of all of them."
+it = "Ogni anno Visions apre un capitolo: un tema, un bando e il corpo di opere che gli risponde. L'archivio di tutti i capitoli."
+zh = "每一年，Visions 都会开启一个章节：一个主题、一次征集，以及回应它的作品。这里是全部章节的档案。"
+
+[page.chapters.heading]
+en = "Chapters"
+it = "Capitoli"
+zh = "章节"
+
+[page.chapters.intro]
+en = '''
+<p>Each year opens a chapter — a theme, a call, and the body of work that
+answers it. Each one keeps its own address, and stays there.</p>
+'''
+it = '''
+<p>Ogni anno apre un capitolo: un tema, un bando e il corpo di opere che gli
+risponde. Ognuno conserva il proprio indirizzo, e lì resta.</p>
+'''
+zh = '''
+<p>每一年开启一个章节：一个主题、一次征集，以及回应它的作品。每个章节都有自己的
+网址，并长久留在那里。</p>
+'''
+
+# Badge on a chapter whose site is not online yet.
+[page.chapters.soon]
+en = "Coming soon"
+it = "In arrivo"
+zh = "即将上线"
+
+
+# =============================================================================
+#  THE CHAPTER ARCHIVE  (data — newest first)
+#
+#  Leave `url` empty and the entry renders greyed out and unclickable, with
+#  the "coming soon" badge above. Fill it in to make it a live link.
+#
+#  `accent` is optional: a hex colour, taken from the --card-border token of
+#  that chapter's own site, used for the entry's border so each chapter
+#  carries its own colour on an otherwise monochrome page. Omit it for a
+#  neutral border.
+# =============================================================================
+
+[[chapters]]
+numeral = "III"
+year = "2026"
+url = "https://2026.visions.land"
+accent = "#25528f"   # --card-border of 2026.visions.land
+title = "Roko's Basilisk"
+note.en = "On machine intelligence, acceleration, and what arrives from the other side of the event horizon."
+note.it = "Sull'intelligenza artificiale, l'accelerazione e ciò che arriva dall'altra parte dell'orizzonte degli eventi."
+note.zh = "关于机器智能、加速，以及从事件视界另一侧到来的东西。"
+
+[[chapters]]
+numeral = "II"
+year = "2025"
+url = "https://2025.visions.land"
+accent = "#952527"   # --card-border of 2025.visions.land
+title = "I popoli del mare"
+note.en = "A prize on technology, Europe and nationhood. Won by Numero Cromatico."
+note.it = "Un premio su tecnologia, Europa e idea di nazione. Vinto da Numero Cromatico."
+note.zh = "一个关于技术、欧洲与民族国家的奖项。由 Numero Cromatico 获得。"
+
+[[chapters]]
+numeral = "I"
+year = "2024"
+url = "https://2024.visions.land"
+title = "Foresta di Cristallo"
+note.en = "The first chapter: an exhibition on value, networks and the digital economy."
+note.it = "Il primo capitolo: una mostra su valore, reti ed economia digitale."
+note.zh = "第一章：一场关于价值、网络与数字经济的展览。"
+
+
+# =============================================================================
+#  COLLECTION PAGE
+# =============================================================================
+
+[page.collection.title]
+en = "The Collection — Visions"
+it = "La Collezione — Visions"
+zh = "馆藏 — Visions"
+
+[page.collection.description]
+en = "The works Visions holds: when each entered the collection, and where it can be found today."
+it = "Le opere che Visions conserva: quando sono entrate in collezione e dove si trovano oggi."
+zh = "Visions 所收藏的作品：每件作品何时入藏，以及目前的所在。"
+
+[page.collection.heading]
+en = "The Collection"
+it = "La Collezione"
+zh = "馆藏"
+
+[page.collection.intro]
+en = '''
+<p>Every chapter leaves something behind. These are the works Visions
+holds — when each entered the collection, and where it can be found today.</p>
+
+<p>Works travel. If you would like to borrow one, or to talk to us about an
+acquisition, write to us.</p>
+'''
+it = '''
+<p>Ogni capitolo lascia qualcosa dietro di sé. Queste sono le opere che Visions
+conserva: quando sono entrate in collezione e dove si trovano oggi.</p>
+
+<p>Le opere viaggiano. Se desiderate richiederne una in prestito, o parlare con
+noi di un'acquisizione, scriveteci.</p>
+'''
+zh = '''
+<p>每一个章节都会留下一些东西。以下是 Visions 所收藏的作品：每件作品何时入藏，
+以及目前的所在。</p>
+
+<p>作品会流动。如果您希望借展某件作品，或与我们商谈收藏事宜，请与我们联系。</p>
+'''
+
+# Field labels in the collection. Translated once here, used by every work.
+[label.artist]
+en = "Artist"
+it = "Artista"
+zh = "艺术家"
+
+[label.chapter]
+en = "Chapter"
+it = "Capitolo"
+zh = "章节"
+
+[label.acquired]
+en = "Acquired"
+it = "Acquisizione"
+zh = "入藏时间"
+
+[label.held]
+en = "Currently held at"
+it = "Attualmente presso"
+zh = "现藏于"
+
+[page.collection.reviewed]
+en = "Provenance last reviewed"
+it = "Provenienza verificata"
+zh = "藏品信息最后核对"
+
+
+# =============================================================================
+#  THE COLLECTION  (data — newest acquisition first)
+#
+#  TO ADD A WORK: copy one whole [[works]] block, paste it directly below this
+#  comment so the newest sits first, and fill in the fields. `artist_url` and
+#  the `note` may be left empty. Dates are written YYYY-MM or YYYY-MM-DD.
+#  The field labels above appear in all three languages automatically — you
+#  never translate those.
+# =============================================================================
+
+# TODO: confirm the acquisition date. The Chapter II regulation transfers
+# ownership on acceptance, which is not the same date as the presentation.
+[[works]]
+title = "THEY (They Hear, Exchange, Yield)"
+artist = "Numero Cromatico"
+artist_url = "https://www.numerocromatico.com/"
+chapter = "II — I popoli del mare (2025)"
+acquired = "2026-06"
+held.en = "La Santissima, Naples"
+held.it = "La Santissima, Napoli"
+held.zh = "La Santissima，那不勒斯"
+note.en = '''Winner of the Chapter II prize. Presented at the
+<a href="https://www.artdaysnapolicampania.com/">2026 Napoli Art Days</a>,
+2&ndash;9 December 2026.'''
+note.it = '''Opera vincitrice del premio del Capitolo II. Presentata agli
+<a href="https://www.artdaysnapolicampania.com/">Art Days Napoli 2026</a>,
+dal 2 al 9 dicembre 2026.'''
+note.zh = '''第二章奖项获奖作品，于
+<a href="https://www.artdaysnapolicampania.com/">2026 年那不勒斯 Art Days</a>
+展出，展期为 2026 年 12 月 2 日至 9 日。'''
+
+
+# =============================================================================
+#  CONTACTS
+# =============================================================================
+
+[contact.heading]
+en = "Contact"
+it = "Contatti"
+zh = "联系我们"
+
+[contact.info_role]
+en = "General enquiries, press, and anything else."
+it = "Informazioni generali, stampa e tutto il resto."
+zh = "一般咨询、媒体联络及其他事务。"
+
+[contact.partnerships_role]
+en = "Acquisitions, loans and borrowings from the collection."
+it = "Acquisizioni, prestiti e richieste di opere in collezione."
+zh = "作品收藏、借展与馆藏外借事宜。"
+
+[contact.instagram_role]
+en = "What we are doing, as we do it."
+it = "Quello che stiamo facendo, mentre lo facciamo."
+zh = "我们正在做的事，实时记录。"
+
+
+# =============================================================================
+#  BUTTONS, NAVIGATION AND FOOTER
+# =============================================================================
+
+[btn.chapters]
+en = "Browse the chapters"
+it = "Sfoglia i capitoli"
+zh = "浏览各章节"
+
+[btn.collection]
+en = "See the collection"
+it = "Guarda la collezione"
+zh = "查看馆藏"
+
+[btn.partnerships]
+en = "Write to us about a work"
+it = "Scriveteci per un'opera"
+zh = "就作品事宜联系我们"
+
+[btn.home]
+en = "Back to visions.land"
+it = "Torna a visions.land"
+zh = "返回 visions.land"
+
+[footer.tagline]
+en = "Visions — art, technology, and the end of the world as we know it."
+it = "Visions — arte, tecnologia e la fine del mondo come lo conosciamo."
+zh = "Visions — 艺术、技术，以及我们所知世界的终结。"
+
+
+# =============================================================================
+#  SMALL FIXED STRINGS
+# =============================================================================
+
+# How a chapter is named in each language. {n} is replaced by the numeral.
+[label.chapter_name]
+en = "Chapter {n}"
+it = "Capitolo {n}"
+zh = "第 {n} 章"
+
+[nav.language]
+en = "Language"
+it = "Lingua"
+zh = "语言"

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ langtag }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="author" content="The Visions Team" />
+    <link rel="icon" type="image/svg+xml" href="{{ rel }}assets/visions_logo.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ canonical }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:locale" content="{{ oglocale }}" />
+    {{ social_image }}
+    <meta name="twitter:card" content="{{ twitter_card }}" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.description }}" />
+
+    <link rel="canonical" href="{{ canonical }}" />
+    {{ hreflang }}
+
+    <link rel="stylesheet" href="{{ rel }}styles.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="container">
+        <header class="masthead masthead--visions">
+          <a href="index.html">
+            <img src="{{ rel }}assets/visions_logo.svg" alt="Visions" />
+          </a>
+          <nav class="langbar" aria-label="{{ nav.language }}">
+            {{ langbar }}
+          </nav>
+        </header>
+
+        <main class="card-wrap">
+          {{ main }}
+        </main>
+
+        <footer class="footer">
+          <p>{{ footer.tagline }}</p>
+          {{ footer_back }}
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

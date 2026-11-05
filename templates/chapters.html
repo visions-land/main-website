@@ -1,0 +1,15 @@
+<article class="card">
+  <div class="card-header">
+    <h1 class="card-title">{{ page.heading }}</h1>
+  </div>
+
+  <div class="card-content">
+    <div class="prose">
+      {{ page.intro }}
+    </div>
+
+    <ul class="chapter-list">
+      {{ block.chapters }}
+    </ul>
+  </div>
+</article>
