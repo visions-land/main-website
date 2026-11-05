@@ -29,7 +29,7 @@ langlabels = { en = "EN", it = "IT", zh = "中文" }
 
 email_info = "info@visions.land"
 email_partnerships = "partnerships@visions.land"
-email_acquisitions = "acquisitions@visions.land"
+email_collection = "collection@visions.land"
 instagram = "https://instagram.com/visions.land"
 instagram_handle = "@visions.land"
 
@@ -309,11 +309,6 @@ zh = "一般咨询、媒体联络及其他事务。"
 en = "Collaborations of all sorts."
 it = "Collaborazioni di ogni tipo."
 zh = "各类合作事宜。"
-
-[contact.acquisitions_role]
-en = "Acquisitions, loans and borrowings from the collection."
-it = "Acquisizioni, prestiti e richieste di opere in collezione."
-zh = "作品收藏、借展与馆藏外借事宜。"
 
 [contact.instagram_role]
 en = "What we are doing, as we do it."

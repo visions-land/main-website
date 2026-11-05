@@ -6,12 +6,12 @@ Anything listed as **missing** shows the English text on the site, so nothing is
 
 ## it
 
-- translated: 35/35
+- translated: 34/34
 - missing: 0
 - stale: 0
 
 ## zh
 
-- translated: 35/35
+- translated: 34/34
 - missing: 0
 - stale: 0
