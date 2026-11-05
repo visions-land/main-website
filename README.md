@@ -192,4 +192,5 @@ in its `CNAME` file.
 ## Contact
 
 <info@visions.land> — general enquiries
-<partnerships@visions.land> — acquisitions and borrowings
+<partnerships@visions.land> — collaborations
+<acquisitions@visions.land> — acquisitions, loans and borrowings

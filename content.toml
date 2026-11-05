@@ -29,6 +29,7 @@ langlabels = { en = "EN", it = "IT", zh = "中文" }
 
 email_info = "info@visions.land"
 email_partnerships = "partnerships@visions.land"
+email_acquisitions = "acquisitions@visions.land"
 instagram = "https://instagram.com/visions.land"
 instagram_handle = "@visions.land"
 
@@ -71,14 +72,13 @@ and technology. We organise art events, prizes, exhibitions and residencies.</p>
 <p>We work on what is actually happening. The civilisation that was promised
 to us is running out of road. Machine intelligence is being built faster than
 anyone can steer it. Feudal power is being rebuilt in software, and the
-nation — that two-hundred-year-old administrative fiction — is quietly coming
+concept of nation is quietly coming
 apart. These are not metaphors and they are not predictions. They are the
 conditions under which art now gets made.</p>
 
 <p>We are not a foundation and we are not a gallery. We have no permanent
 address and no permanent programme. Each year we open a <em>chapter</em>: a
-theme, a call, a prize, an exhibition. We acquire the work it produces, and we
-keep it.</p>
+theme, a call, a prize, an exhibition.</p>
 '''
 it = '''
 <p>Visions è un gruppo non strutturato di professionisti che lavorano tra
@@ -87,14 +87,13 @@ cultura e tecnologia. Organizziamo eventi d'arte, premi, mostre e residenze.</p>
 <p>Lavoriamo su ciò che sta davvero accadendo. La civiltà che ci era stata
 promessa ha esaurito la strada. L'intelligenza artificiale viene costruita più
 in fretta di quanto chiunque sia in grado di governarla. Il potere feudale
-viene ricostruito nel software e la nazione — quella finzione amministrativa
-vecchia di duecento anni — si sta disfacendo in silenzio. Non sono metafore e
+viene ricostruito nel software e il concetto di nazione si sta disfacendo
+in silenzio. Non sono metafore e
 non sono previsioni: sono le condizioni in cui oggi si fa arte.</p>
 
 <p>Non siamo una fondazione e non siamo una galleria. Non abbiamo una sede
 fissa né un programma permanente. Ogni anno apriamo un <em>capitolo</em>: un
-tema, un bando, un premio, una mostra. Acquisiamo l'opera che ne nasce, e la
-conserviamo.</p>
+tema, un bando, un premio, una mostra.</p>
 '''
 zh = '''
 <p>Visions 是一个由文化与技术领域专业人士组成的非结构化团体。我们组织艺术活动、
@@ -102,12 +101,10 @@ zh = '''
 
 <p>我们关注的是正在真实发生的事。曾经许诺给我们的那种文明已走到尽头。机器智能的
 建造速度，已超出任何人能够驾驭的范围。封建式的权力正在软件中被重建，而民族国家
-——这个两百年前的行政虚构——正在悄然解体。这些既不是隐喻，也不是预言，而是今天
-艺术得以产生的现实条件。</p>
+的概念正在悄然解体。这些既不是隐喻，也不是预言，而是今天艺术得以产生的现实条件。</p>
 
 <p>我们不是基金会，也不是画廊。我们没有固定的地址，也没有长期的节目表。每一年，
-我们开启一个<em>章节</em>：一个主题、一次征集、一个奖项、一场展览。我们收藏由此
-诞生的作品，并长期保存。</p>
+我们开启一个<em>章节</em>：一个主题、一次征集、一个奖项、一场展览。</p>
 '''
 
 
@@ -122,9 +119,9 @@ it = "Capitoli — Visions"
 zh = "章节 — Visions"
 
 [page.chapters.description]
-en = "Every year Visions opens a chapter: a theme, a call, and the body of work that answers it. The archive of all of them."
-it = "Ogni anno Visions apre un capitolo: un tema, un bando e il corpo di opere che gli risponde. L'archivio di tutti i capitoli."
-zh = "每一年，Visions 都会开启一个章节：一个主题、一次征集，以及回应它的作品。这里是全部章节的档案。"
+en = "Here you will find the archive of all chapters we opened until now."
+it = "Qui trovate l'archivio di tutti i capitoli che abbiamo aperto finora."
+zh = "这里是我们迄今开启的所有章节的档案。"
 
 [page.chapters.heading]
 en = "Chapters"
@@ -189,9 +186,9 @@ numeral = "I"
 year = "2024"
 url = "https://2024.visions.land"
 title = "Foresta di Cristallo"
-note.en = "The first chapter: an exhibition on value, networks and the digital economy."
-note.it = "Il primo capitolo: una mostra su valore, reti ed economia digitale."
-note.zh = "第一章：一场关于价值、网络与数字经济的展览。"
+note.en = "An exhibition on value, networks and the digital economy."
+note.it = "Una mostra su valore, reti ed economia digitale."
+note.zh = "一场关于价值、网络与数字经济的展览。"
 
 
 # =============================================================================
@@ -215,15 +212,15 @@ zh = "馆藏"
 
 [page.collection.intro]
 en = '''
-<p>Every chapter leaves something behind. These are the works Visions
-holds — when each entered the collection, and where it can be found today.</p>
+<p>Every Chapter leaves something behind. These are the works Visions
+holds, when each entered the collection, and where it can be found today.</p>
 
 <p>Works travel. If you would like to borrow one, or to talk to us about an
 acquisition, write to us.</p>
 '''
 it = '''
-<p>Ogni capitolo lascia qualcosa dietro di sé. Queste sono le opere che Visions
-conserva: quando sono entrate in collezione e dove si trovano oggi.</p>
+<p>Ogni Capitolo lascia qualcosa dietro di sé. Queste sono le opere che Visions
+conserva, quando sono entrate in collezione e dove si trovano oggi.</p>
 
 <p>Le opere viaggiano. Se desiderate richiederne una in prestito, o parlare con
 noi di un'acquisizione, scriveteci.</p>
@@ -309,6 +306,11 @@ it = "Informazioni generali, stampa e tutto il resto."
 zh = "一般咨询、媒体联络及其他事务。"
 
 [contact.partnerships_role]
+en = "Collaborations of all sorts."
+it = "Collaborazioni di ogni tipo."
+zh = "各类合作事宜。"
+
+[contact.acquisitions_role]
 en = "Acquisitions, loans and borrowings from the collection."
 it = "Acquisizioni, prestiti e richieste di opere in collezione."
 zh = "作品收藏、借展与馆藏外借事宜。"
@@ -333,7 +335,7 @@ en = "See the collection"
 it = "Guarda la collezione"
 zh = "查看馆藏"
 
-[btn.partnerships]
+[btn.acquisitions]
 en = "Write to us about a work"
 it = "Scriveteci per un'opera"
 zh = "就作品事宜联系我们"
