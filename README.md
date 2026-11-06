@@ -4,9 +4,15 @@ The hub site for **Visions**: who we are, the chapter archive, and the
 collection. Plain HTML and CSS, no framework, no runtime dependencies — the
 files in this repository are the website.
 
-The chapters live on their own subdomains and have their own repositories:
-[2025.visions.land](https://2025.visions.land) and
-[2026.visions.land](https://2026.visions.land).
+Each chapter lives on its own subdomain, named for its year, with its own
+repository: [2025.visions.land](https://2025.visions.land) (Foresta di
+Cristallo), [2026.visions.land](https://2026.visions.land) (I popoli del mare)
+and [2027.visions.land](https://2027.visions.land) (Roko's Basilisk).
+
+> **Pending:** the chapter years were corrected upwards by one, so all three
+> subdomains need re-pointing before the links here are right. Until that is
+> done, `2025.visions.land` still serves I popoli del mare, `2026.visions.land`
+> still serves Roko's Basilisk, and `2027.visions.land` does not exist.
 
 ## How this repository works
 
@@ -138,7 +144,7 @@ repository subpath (`/<repo>/`) without changes.
 
 ### DNS — different from the chapter sites
 
-2025 and 2026 are *subdomains*, so each is a single `CNAME` record. An apex
+The chapter sites are *subdomains*, so each is a single `CNAME` record. An apex
 domain cannot be a CNAME, so `visions.land` needs address records instead:
 
 | Type | Name | Value |
@@ -167,9 +173,9 @@ in its `CNAME` file.
   Chinese pages are marked `lang="zh-Hans"`, which `styles.css` uses to switch
   to a Simplified-Chinese font stack and to turn off the Latin hyphenation and
   letter-spacing that damage Han glyphs.
-- **The palette** is deliberately hue-free. 2025 owns amber, 2026 owns blue; the
-  hub owns no colour, so it still reads as the institution when a fourth chapter
-  arrives in a colour nobody has chosen yet. Everything is tokenised in the
+- **The palette** is deliberately hue-free. Each chapter site owns a hue of its
+  own; the hub owns none, so it still reads as the institution when a fourth
+  chapter arrives in a colour nobody has chosen yet. Everything is tokenised in the
   `:root` block of `styles.css`.
 - **No hero image** on the front page by default: the wordmark carries the
   identity. To add one, put a 1280×635 JPEG in `assets/` (that is the size both
@@ -185,8 +191,8 @@ in its `CNAME` file.
   `TODO` in `content.toml`. The Chapter II regulation transfers ownership on
   acceptance, which is not the date of the presentation. Where the work is held
   between now and December 2026 also needs filling in.
-- Chapter I's one-line description in `content.toml` is inferred from the old
-  2024 site and has not been confirmed. The title and the link have.
+- Chapter I's one-line description in `content.toml` is inferred from that
+  chapter's old site and has not been confirmed. The title and the link have.
 - The Chinese copy has not been reviewed by a native speaker.
 
 ## Contact

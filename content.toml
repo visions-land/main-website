@@ -163,9 +163,9 @@ zh = "即将上线"
 
 [[chapters]]
 numeral = "III"
-year = "2026"
-url = "https://2026.visions.land"
-accent = "#25528f"   # --card-border of 2026.visions.land
+year = "2027"
+url = "https://2027.visions.land"
+accent = "#25528f"   # --card-border of that chapter's own site
 title = "Roko's Basilisk"
 note.en = "On machine intelligence, acceleration, and what arrives from the other side of the event horizon."
 note.it = "Sull'intelligenza artificiale, l'accelerazione e ciò che arriva dall'altra parte dell'orizzonte degli eventi."
@@ -173,9 +173,9 @@ note.zh = "关于机器智能、加速，以及从事件视界另一侧到来的
 
 [[chapters]]
 numeral = "II"
-year = "2025"
-url = "https://2025.visions.land"
-accent = "#952527"   # --card-border of 2025.visions.land
+year = "2026"
+url = "https://2026.visions.land"
+accent = "#952527"   # --card-border of that chapter's own site
 title = "I popoli del mare"
 note.en = "A prize on technology, Europe and nationhood. Won by Numero Cromatico."
 note.it = "Un premio su tecnologia, Europa e idea di nazione. Vinto da Numero Cromatico."
@@ -183,8 +183,8 @@ note.zh = "一个关于技术、欧洲与民族国家的奖项。由 Numero Crom
 
 [[chapters]]
 numeral = "I"
-year = "2024"
-url = "https://2024.visions.land"
+year = "2025"
+url = "https://2025.visions.land"
 title = "Foresta di Cristallo"
 note.en = "An exhibition on value, networks and the digital economy."
 note.it = "Una mostra su valore, reti ed economia digitale."
@@ -275,7 +275,7 @@ zh = "藏品信息最后核对"
 title = "THEY (They Hear, Exchange, Yield)"
 artist = "Numero Cromatico"
 artist_url = "https://www.numerocromatico.com/"
-chapter = "II — I popoli del mare (2025)"
+chapter = "II — I popoli del mare (2026)"
 acquired = "2026-06"
 held.en = "La Santissima, Naples"
 held.it = "La Santissima, Napoli"

@@ -2,11 +2,11 @@
    VISIONS — visions.land
    DESIGN SYSTEM — SINGLE SOURCE OF TRUTH
    All colors, fonts, radii, etc. are defined here and only here.
-   The structure is carried over from the chapter sites
-   (2025.visions.land, 2026.visions.land); the palette is not.
-   Those sites each own a hue — amber for 2025, blue for 2026.
-   The hub owns none, so it still reads as the institution when a
-   fourth chapter arrives in a colour nobody has picked yet.
+   The structure is carried over from the chapter sites; the
+   palette is not. Each chapter site owns a hue — red for I popoli
+   del mare, blue for Roko's Basilisk. The hub owns none, so it
+   still reads as the institution when a fourth chapter arrives in
+   a colour nobody has picked yet.
    To restyle the site, edit the :root block.
    ============================================================ */
 
